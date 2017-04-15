@@ -1,6 +1,6 @@
 # Nugzar Chkhaidze nchkhaidze
-# project1.py
-
+# project1
+#
 
 
 import time
@@ -29,7 +29,6 @@ def effDC(alist):
 
     print (min,max,"- min and max values")
     print (time.clock() - t0, "seconds process time")
-    
 
 def brute_force(alist):
     a=0
@@ -57,6 +56,30 @@ def effBF(alist):
     print (time.clock() - t0, "seconds process time")
 
 
+while (1):
+    print("Type 1 for array sized 10");
+    print("Type 2 for array sized 50");
+    print("Type 3 for array sized 200");
+    print("Type 4 to Quit");
+    x = int(input())
 
-alist = [54,26,93,17,77,31,44,55,20]
-effDC(alist)
+    if x==4:
+        print("Thank you!")
+        break
+    elif x==1:
+        n = 10
+    elif x==2:
+        n = 50
+    elif x==3:
+        n = 200
+    else:
+        print("Wrong number! Try again")
+        continue
+
+    print("Array size is ",n)
+    alist = [random.randint(1,1000) for _ in range(n)]
+        # creates a list with n numbers
+
+    effDC(alist) ## calls divide and conquer solution
+    effBF(alist) ## calls brute forces solution
+    print('\n')
