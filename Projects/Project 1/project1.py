@@ -29,6 +29,33 @@ def effDC(alist):
 
     print (min,max,"- min and max values")
     print (time.clock() - t0, "seconds process time")
+    
+
+def brute_force(alist):
+    a=0
+    b=0
+    for i in alist:
+        for j in alist:
+            flag = 0
+            for q in alist:
+                if q<i:
+                    flag = 1
+                if q>j:
+                    flag = 1
+            if flag==0:
+                a,b=i,j;
+    return a,b
+
+def effBF(alist):
+    print("Brute Force Algorithm")
+    t0 = time.clock()    # saves the starting time
+
+    min,max=brute_force(alist)
+        
+
+    print (min,max,"- min and max values")
+    print (time.clock() - t0, "seconds process time")
+
 
 
 alist = [54,26,93,17,77,31,44,55,20]
