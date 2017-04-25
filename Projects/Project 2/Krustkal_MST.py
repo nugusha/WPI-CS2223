@@ -28,10 +28,10 @@ def krustkal(graph,n):    # graph edges and number of vertieces
     edges.sort()        # sorting edges by length
     
     for edge in edges:
-        len, x, y  = edge
+        weight, x, y  = edge
         if find(x) != find(y): # checking if vertices are in different trees 
             MST_Krustkal.add(edge)
-            total_length += len
+            total_length += weight
       #      print(edge)
             union(x, y)
         
