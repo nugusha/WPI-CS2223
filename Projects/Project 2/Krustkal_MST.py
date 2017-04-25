@@ -21,19 +21,22 @@ def kruskal(graph,n):    # graph edges and number of vertieces
         parent[i] = i
         depth[i] = 1
 
+    total_length = 0 # sum of edge weights in MST
     MST_Krustkal = set()
     
     edges = list(graph)
     edges.sort()        # sorting edges by length
     
     for edge in edges:
-        len, start, end  = edge
-        if find(start) != find(end): # checking if vertices are in 
-            MST_Krustkal.add(edge)   # different trees
+        len, x, y  = edge
+        if find(x) != find(y): # checking if vertices are in different trees 
+            MST_Krustkal.add(edge)
+            total_length += len
       #      print(edge)
-            union(start, end)
+            union(x, y)
         
-    return MST_Krustkal
+#    return MST_Krustkal
+    return total_length
 
 N = 4
 graph = set([           
@@ -52,5 +55,6 @@ MST_Krustkal = set([
             ])
 
 
-assert kruskal(graph,N) == MST_Krustkal
+# assert kruskal(graph,N) == MST_Krustkal
+assert kruskal(graph,N) == 4
 
