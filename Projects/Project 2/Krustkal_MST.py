@@ -16,7 +16,7 @@ def union(a, b):   # unifying two vertices a and b
             parent[A] = B
             if depth[A] == depth[B]: depth[B] += 1 # updating depth
 
-def kruskal(graph,n):    # graph edges and number of vertieces
+def krustkal(graph,n):    # graph edges and number of vertieces
     for i in range(1,n+1): # initializing vertices
         parent[i] = i
         depth[i] = 1
@@ -56,5 +56,5 @@ MST_Krustkal = set([
 
 
 # assert kruskal(graph,N) == MST_Krustkal
-assert kruskal(graph,N) == 4
+assert krustkal(graph,N) == 4
 
