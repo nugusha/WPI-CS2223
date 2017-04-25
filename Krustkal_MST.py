@@ -36,8 +36,8 @@ def kruskal(graph,n):    # graph edges and number of vertieces
     return MST_Krustkal
 
 N = 4
-graph = set([
-            (1, 1, 2),
+graph = set([           
+            (1, 1, 2),   # (w,x,y) w-weight, x-vertex1, y-vertex2
             (5, 1, 3),
             (3, 1, 4),
             (4, 2, 3),
