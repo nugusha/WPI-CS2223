@@ -1,3 +1,5 @@
+# Time efficiency O(m*log(m)+m*log(n)) ~ O(m*log(m))
+# Space efficiency O(n+m)
 parent = dict() # parent vertex
 depth = dict()  # maximum depth down from the vertex
 
