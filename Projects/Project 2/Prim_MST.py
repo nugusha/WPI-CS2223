@@ -1,3 +1,5 @@
+# Time efficiency O(m*log(n))
+# Space efficiency O(n+m)
 import heapq
 
 dist = dict()  # distance
